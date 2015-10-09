@@ -19,7 +19,7 @@ namespace CsvHelper.Example
 
 		static void Main( string[] args )
 		{
-			ReadRawFieldsByIndex();
+			//ReadRawFieldsByIndex();
 			//ReadRawFieldsByName();
 			//ReadFieldsByIndex();
 			//ReadRecordsNoAttributes();
@@ -27,7 +27,7 @@ namespace CsvHelper.Example
 			//ReadAllRecords();
 
 			//WriteRawFields();
-			//WriteFields();
+			WriteFields();
 			//WriteRecordsNoAttributes();
 			//WriteRecordsWithAttributes();
 			//WriteAllRecords();
@@ -182,6 +182,9 @@ namespace CsvHelper.Example
 				writer.WriteField( Guid.NewGuid() );
 				writer.WriteField( new CustomType { First = 1, Second = 2, Third = 3 } );
 				writer.NextRecord();
+                
+                // done
+                writer.Done();
 
 				memoryStream.Position = 0;
 

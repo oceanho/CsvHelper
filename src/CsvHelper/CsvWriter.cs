@@ -841,5 +841,13 @@ namespace CsvHelper
 			return !cantWrite;
 		}
 #endif
-	}
+
+        /// <summary>
+        /// Commit all work（writerStream.Flush()）
+        /// </summary>
+        public virtual void Done()
+        {
+            this.serializer.Done();
+        }
+    }
 }

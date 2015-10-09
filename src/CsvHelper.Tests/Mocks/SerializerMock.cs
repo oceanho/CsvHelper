@@ -33,7 +33,9 @@ namespace CsvHelper.Tests.Mocks
 
 			records.Add( record );
 		}
-
+        public virtual void Done()
+        {
+        }
 		public void Dispose()
 		{
 		}
